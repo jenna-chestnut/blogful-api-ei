@@ -8,6 +8,7 @@
     "watch": "npm t -- --watch",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku main"
   },
@@ -19,7 +20,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.2.0",
-    "morgan": "^1.10.0"
+    "knex": "^0.21.12",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
@@ -27,6 +30,7 @@
     "eslint-config-prettier": "^6.15.0",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
+    "postgrator-cli": "^3.2.0",
     "prettier": "2.2.1",
     "supertest": "^6.0.1"
   }
