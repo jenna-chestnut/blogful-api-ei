@@ -9,6 +9,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
     "predeploy": "npm audit",
     "deploy": "git push heroku main"
   },
@@ -22,7 +23,8 @@
     "helmet": "^4.2.0",
     "knex": "^0.21.12",
     "morgan": "^1.10.0",
-    "pg": "^8.5.1"
+    "pg": "^8.5.1",
+    "xss": "^1.0.8"
   },
   "devDependencies": {
     "chai": "^4.2.0",
